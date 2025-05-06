@@ -1,0 +1,9 @@
+package com.mandeep.guest_service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import entity.Guest;
+
+public interface GuestRepository extends JpaRepository<Guest, Long> {
+
+}

@@ -1,0 +1,89 @@
+package controller;
+
+import java.util.HashMap;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import entity.GuestDTO;
+import entity.Reservation;
+import entity.Room;
+import service.ReservationService;
+
+@RestController
+@RequestMapping("/res")
+public class ReservationController {
+	
+	@Autowired
+    private  ReservationService service;
+    
+	    
+    @GetMapping
+    public List<Reservation> getAllReservations() { 
+    	return service.getAllReservations(); }
+    
+    
+    @GetMapping("/{id}")
+    public Optional<Reservation> getReservationById(@PathVariable Long id, @RequestHeader("loggedInUser") String username){
+//    	System.out.println("logged in user: "+ username);
+    	return service.getReservationById(id);
+    }
+    
+    
+    
+    @GetMapping("/withguest/{id}")
+    public Map<String, Object> getReservationWithGuest(@PathVariable Long id, @RequestHeader("loggedInUser") String username) {
+        Map<String, Object> response = new HashMap<>();
+        Optional<Reservation> reservation = service.getReservationById(id);
+
+        if (reservation.isPresent()) {
+            response.put("reservation", reservation.get());
+            GuestDTO guest = service.getGuestDetails(reservation.get().getGuestId());
+            response.put("guestDetails", guest);
+        } else {
+            response.put("message", "Reservation not found");
+        }
+        return response;
+    }
+	    
+    
+    
+    @PostMapping
+    public Reservation createReservation(@RequestBody Reservation reservation, @RequestHeader("loggedInUser") String username) { 
+    	return service.createReservation(reservation, username); }
+	    
+    
+    
+    @DeleteMapping("/{id}")
+    public void deleteReservation(@PathVariable Long id) { 
+    	service.deleteReservation(id); }
+   
+    
+    
+    @PostMapping("/addRoom")
+    public Room addRoom(@RequestParam String roomNumber, @RequestParam String roomType) {
+    	return service.addRoomToInventory(roomNumber, roomType);
+    }
+    
+    
+    @GetMapping("/availableRooms")
+    public List<Room> getAvailableRooms(){
+    	return service.getAvailableRooms();
+    }
+    
+
+}
+
+
