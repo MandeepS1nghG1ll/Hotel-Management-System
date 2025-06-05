@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BillingServiceTest" project="billing-service" tests="3" started="3" failures="0" errors="2" ignored="0">
+  <testsuite name="com.mandeep.billing_service.BillingServiceTest" time="0.196" displayname="BillingServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.mandeep.billing_service.BillingServiceTest]">
+    <testcase name="testGetTotalAmountNotFound" classname="com.mandeep.billing_service.BillingServiceTest" time="0.149" displayname="testGetTotalAmountNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.mandeep.billing_service.BillingServiceTest]/[method:testGetTotalAmountNotFound()]"/>
+    <testcase name="testGenerateBill" classname="com.mandeep.billing_service.BillingServiceTest" time="0.026" displayname="testGenerateBill()" uniqueid="[engine:junit-jupiter]/[class:com.mandeep.billing_service.BillingServiceTest]/[method:testGenerateBill()]">
+      <error>java.lang.RuntimeException: Reservation not found for ID: 1&#13;
+	at com.mandeep.billing_service.BillingService.generateBill(BillingService.java:29)&#13;
+	at com.mandeep.billing_service.BillingServiceTest.testGenerateBill(BillingServiceTest.java:50)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testGetTotalAmountFound" classname="com.mandeep.billing_service.BillingServiceTest" time="0.012" displayname="testGetTotalAmountFound()" uniqueid="[engine:junit-jupiter]/[class:com.mandeep.billing_service.BillingServiceTest]/[method:testGetTotalAmountFound()]">
+      <error>java.lang.RuntimeException: Billing record not found for reservation ID: 1&#13;
+	at com.mandeep.billing_service.BillingService.lambda$1(BillingService.java:57)&#13;
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)&#13;
+	at com.mandeep.billing_service.BillingService.getTotalAmount(BillingService.java:56)&#13;
+	at com.mandeep.billing_service.BillingServiceTest.testGetTotalAmountFound(BillingServiceTest.java:70)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

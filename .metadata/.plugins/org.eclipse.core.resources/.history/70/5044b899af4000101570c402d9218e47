@@ -1,0 +1,75 @@
+package com.mandeep.guest_service;
+
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.mandeep.guest_service.controller.GuestController;
+import com.mandeep.guest_service.entity.Guest;
+import com.mandeep.guest_service.repo.GuestRepository;
+import com.mandeep.guest_service.service.GuestService;
+
+import dto.BillingClient;
+import dto.ReservationClient;
+import dto.ReservationDTO;
+
+// This will scan only the web layer
+@WebMvcTest(GuestController.class)
+public class GuestControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private GuestRepository guestRepository;
+
+    @MockBean
+    private ReservationClient reservationClient;
+
+    @MockBean
+    private BillingClient billingClient;
+    
+    @MockBean
+    private GuestService guestService;
+
+    @Test
+    void testGetFullGuestDetails() throws Exception {
+        Guest guest = new Guest();
+        guest.setId(1L);
+        guest.setName("Alice");
+        guest.setEmail("alice@example.com");
+        guest.setPhone("1234567890");
+        guest.setAddress("Mumbai");
+
+        ReservationDTO reservation = new ReservationDTO();
+        reservation.setId(100L);
+        reservation.setGuestId(1L);
+        reservation.setRoomNumber("101");
+        reservation.setRoomType("Deluxe");
+        reservation.setCheckInDate(LocalDate.now());
+        reservation.setCheckOutDate(LocalDate.now().plusDays(2));
+
+        // Mocks
+        Mockito.when(guestRepository.findById(1L)).thenReturn(Optional.of(guest));
+        Mockito.when(reservationClient.getReservationById(1L)).thenReturn(reservation);
+        Mockito.when(billingClient.getTotalAmount(100L)).thenReturn(3000.0);
+
+        mockMvc.perform(get("/guests/details/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.guest.name").value("Alice"))
+                .andExpect(jsonPath("$.reservation.roomNumber").value("101"))
+                .andExpect(jsonPath("$.billingAmount").value(3000.0));
+    }
+}
+

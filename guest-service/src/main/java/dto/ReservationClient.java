@@ -2,10 +2,13 @@ package dto;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import com.mandeep.guest_service.service.GuestFallbackService;
+
 import org.springframework.cloud.openfeign.FeignClient;
 
 
-@FeignClient(name = "RESERVATION-SERVICE")
+@FeignClient(name = "RESERVATION-SERVICE", fallback = GuestFallbackService.class)
 public interface ReservationClient {
 	@GetMapping("/res/{id}")
     public ReservationDTO getReservationById(@PathVariable Long id);

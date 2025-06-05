@@ -1,0 +1,94 @@
+package com.mandeep.billing_service;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.*;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class BillingServiceTest {
+
+    @Mock
+    private BillingRepository billingRepository;
+
+    @Mock
+    private ReservationClient reservationClient;
+
+    @Mock
+    private RoomClient roomClient;
+
+    @InjectMocks
+    private BillingService billingService;
+
+    private ReservationDTO reservation;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+
+        reservation = new ReservationDTO();
+        reservation.setReservationId(1L);
+        reservation.setRoomNumber(101);
+        reservation.setCheckInDate(LocalDate.of(2024, 6, 1));
+        reservation.setCheckOutDate(LocalDate.of(2024, 6, 5));
+    }
+
+    @Test
+    void testGenerateBill_Success() {
+        when(reservationClient.getReservationById(1L)).thenReturn(reservation);
+
+        Billing savedBilling = new Billing();
+        when(billingRepository.save(any(Billing.class))).thenReturn(savedBilling);
+
+        Billing billing = billingService.generateBill(1L, 1000.0);
+
+        assertEquals(1L, billing.getReservationId());
+        assertEquals(101, billing.getRoomNumber());
+        assertEquals(4000.0, billing.getAmount());
+        assertEquals(reservation.getCheckInDate(), billing.getCheckInDate());
+        assertEquals(reservation.getCheckOutDate(), billing.getCheckOutDate());
+
+        verify(roomClient, times(1)).updateRoomAvailability(101, true);
+        verify(billingRepository, times(1)).save(any(Billing.class));
+    }
+
+    @Test
+    void testGenerateBill_ReservationNotFound() {
+        when(reservationClient.getReservationById(2L)).thenReturn(null);
+
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            billingService.generateBill(2L, 500.0);
+        });
+
+        assertEquals("Reservation not found for ID: 2", exception.getMessage());
+    }
+
+    @Test
+    void testGetTotalAmount_BillingExists() {
+        Billing billing = new Billing();
+        billing.setReservationId(1L);
+        billing.setAmount(3000.0);
+
+        when(billingRepository.findByReservationId(1L)).thenReturn(Optional.of(billing));
+
+        Double totalAmount = billingService.getTotalAmount(1L);
+        assertEquals(3000.0, totalAmount);
+    }
+
+    @Test
+    void testGetTotalAmount_BillingNotFound() {
+        when(billingRepository.findByReservationId(2L)).thenReturn(Optional.empty());
+
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            billingService.getTotalAmount(2L);
+        });
+
+        assertEquals("Billing record not found for reservation ID: 2", exception.getMessage());
+    }
+}

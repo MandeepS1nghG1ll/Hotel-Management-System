@@ -14,11 +14,23 @@ import org.springframework.stereotype.Service;
 import com.mandeep.guest_service.entity.Guest;
 import com.mandeep.guest_service.repo.GuestRepository;
 
+import dto.BillingClient;
+import dto.BillingDTO;
+import dto.GuestDetailsDTO;
+import dto.ReservationClient;
+import dto.ReservationDTO;
+
 @Service
 public class GuestService {
 	
 	    @Autowired
 	    private GuestRepository repository;
+	    
+	    @Autowired
+		private ReservationClient reservationClient;
+	    
+	    @Autowired
+		private BillingClient billingClient;
 	    
 	    
 
@@ -70,5 +82,8 @@ public class GuestService {
 	            return new ResponseEntity<>("Failed to delete guest!", HttpStatus.INTERNAL_SERVER_ERROR);
 	        }
 	    }
+	    
+	    
+	    
 
 }
