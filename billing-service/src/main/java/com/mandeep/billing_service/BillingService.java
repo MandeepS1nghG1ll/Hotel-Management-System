@@ -39,6 +39,7 @@ public class BillingService {
         billing.setAmount(totalAmount);
         billing.setCheckInDate(reservation.getCheckInDate());
         billing.setCheckOutDate(reservation.getCheckOutDate());
+        billing.setPricePerDay(amountPerDay);
 
         billingRepository.save(billing);
 
@@ -51,11 +52,26 @@ public class BillingService {
         return billing;
     }
 
-    public Double getTotalAmount(Long reservationId) {
-        Optional<Billing> billing = billingRepository.findByReservationId(reservationId);
-        return billing.map(Billing::getAmount).orElseThrow(() -> 
-            new RuntimeException("Billing record not found for reservation ID: " + reservationId)
-        );
-    }
+    public Billing getTotalAmount(Long reservationId) {
+//        Optional<Billing> billing = billingRepository.findByReservationId(reservationId);
+//        return billing.map(Billing::getAmount).orElseThrow(() -> 
+//            new RuntimeException("Billing record not found for reservation ID: " + reservationId)
+//        );
+    	 Optional<Billing> billingOpt = billingRepository.findByReservationId(reservationId);
+    	    
+    	    Billing billing = billingOpt.orElseThrow(() ->
+    	        new RuntimeException("Billing record not found for reservation ID: " + reservationId)
+    	    );
+
+    	    Billing dto = new Billing();
+    	    dto.setReservationId(billing.getReservationId());
+    	    dto.setRoomNumber(billing.getRoomNumber());
+    	    dto.setPricePerDay(billing.getPricePerDay());
+    	    dto.setAmount(billing.getAmount());
+    	    dto.setCheckInDate(billing.getCheckInDate());
+    	    dto.setCheckOutDate(billing.getCheckOutDate());
+
+    	    return dto;
+    	}
 
 }

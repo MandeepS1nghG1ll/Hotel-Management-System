@@ -40,33 +40,70 @@ public class ReservationService {
     	return repository.findById(id);}
     
     
-    @Transactional
-    public Reservation createReservation(Reservation reservation) {
-        Room room = roomRepository.findByRoomNumber(reservation.getRoomNumber());
-
-        if (room != null && room.isAvailable()) {
-            room.setAvailable(false);
-            roomRepository.save(room);
-
-            reservation.setRoomType(room.getRoomType());
-            return repository.save(reservation);
-        } else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Room not available for booking.");
-        }
-    }
+//    @Transactional
+//    public Reservation createReservation(Reservation reservation) {
+//        Room room = roomRepository.findByRoomNumber(reservation.getRoomNumber());
+//
+//        if (room != null && room.isAvailable()) {
+//            room.setAvailable(false);
+//            roomRepository.save(room);
+//
+//            reservation.setRoomType(room.getRoomType());
+//            return repository.save(reservation);
+//        } else {
+//            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Room not available for booking.");
+//        }
+//    }
     
     
     public void deleteReservation(Long id) { 
     	repository.deleteById(id); }
     
 
+//    public Room addRoomToInventory(String roomNumber, String roomType) {
+//        if (roomRepository.findByRoomNumber(roomNumber) != null) {
+//            throw new ResponseStatusException(HttpStatus.CONFLICT, "Room already exists.");
+//        }
+//        Room room = new Room(roomNumber, roomType, true);
+//        return roomRepository.save(room);
+//    }
     public Room addRoomToInventory(String roomNumber, String roomType) {
         if (roomRepository.findByRoomNumber(roomNumber) != null) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Room already exists.");
         }
+
+        int roomNum;
+        try {
+            roomNum = Integer.parseInt(roomNumber);
+        } catch (NumberFormatException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Room number must be a valid integer.");
+        }
+
+        // Apply constraints based on room type
+        switch (roomType.toLowerCase()) {
+            case "single":
+                if (roomNum < 100 || roomNum > 199) {
+                    throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Single room numbers must be between 100 and 199.");
+                }
+                break;
+            case "double":
+                if (roomNum < 200 || roomNum > 299) {
+                    throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Double room numbers must be between 200 and 299.");
+                }
+                break;
+            case "suite":
+                if (roomNum < 300 || roomNum > 399) {
+                    throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Suite room numbers must be between 300 and 399.");
+                }
+                break;
+            default:
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid room type. Must be 'Single', 'Double', or 'Suite'.");
+        }
+
         Room room = new Room(roomNumber, roomType, true);
         return roomRepository.save(room);
     }
+
     
 
     public List<Room> getAvailableRooms() {
@@ -85,6 +122,40 @@ public class ReservationService {
 //        }
 //
 //    }
+    @Transactional
+    public Reservation createReservation(Reservation reservation) {
+        String roomType = reservation.getRoomType();
+        
+        if (roomType == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Room type is required.");
+        }
+
+        // Find all available rooms of the specified type
+        List<Room> availableRooms = roomRepository.findByAvailableAndRoomType(true, roomType);
+
+        // Filter by room number range based on type
+        Room assignedRoom = availableRooms.stream()
+            .filter(room -> {
+                int roomNum = Integer.parseInt(room.getRoomNumber());
+                return switch (roomType.toLowerCase()) {
+                    case "single" -> roomNum >= 100 && roomNum < 200;
+                    case "double" -> roomNum >= 200 && roomNum < 300;
+                    case "suite"  -> roomNum >= 300 && roomNum < 400;
+                    default       -> false;
+                };
+            })
+            .findFirst()
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "No available rooms of type: " + roomType));
+
+        // Mark the room as unavailable
+        assignedRoom.setAvailable(false);
+        roomRepository.save(assignedRoom);
+
+        // Set roomNumber and save reservation
+        reservation.setRoomNumber(assignedRoom.getRoomNumber());
+        return repository.save(reservation);
+    }
+
 
 
 	public boolean updateRoomAvailability(String roomNumber, boolean available) {

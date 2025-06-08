@@ -13,4 +13,5 @@ import com.mandeep.reservation_service.entity.Room;
 public interface RoomRepository extends JpaRepository<Room, Long> {
     Room findByRoomNumber(String roomNumber);
     List<Room> findByAvailable(boolean available);
+    List<Room> findByAvailableAndRoomType(boolean available, String roomType);
 }

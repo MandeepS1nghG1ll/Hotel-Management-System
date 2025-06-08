@@ -27,6 +27,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     private final Map<String, List<String>> endpointRoleMapping = Map.of(
     	    "/guests", List.of("ROLE_USER", "ROLE_ADMIN"),
     	    "/res", List.of("ROLE_ADMIN"),
+    	    "/res/createReservation", List.of("ROLE_USER"),
     	    "/billing", List.of("ROLE_ADMIN")
     	);
 

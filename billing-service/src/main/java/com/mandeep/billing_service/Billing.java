@@ -31,6 +31,17 @@ public class Billing {
 
     @Column(name = "check_out_date")
     private LocalDate checkOutDate;
+    
+    @Column(name = "price_per_day", nullable = false)
+    private Double pricePerDay;
+
+    public Double getPricePerDay() {
+        return pricePerDay;
+    }
+
+    public void setPricePerDay(Double pricePerDay) {
+        this.pricePerDay = pricePerDay;
+    }
 
 	public Long getId() {
 		return id;

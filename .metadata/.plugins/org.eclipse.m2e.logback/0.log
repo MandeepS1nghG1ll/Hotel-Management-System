@@ -7991,3 +7991,142 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.webjars:s
 2025-06-06 00:29:02,497 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-06-06 00:29:02,499 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-06-06 00:29:02,502 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-06 00:47:23,577 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-06 00:47:23,578 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-06 00:47:23,583 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-06 01:16:13,438 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@44d5fba5{STOPPING}[12.0.15,sto=0]
+2025-06-06 01:16:13,446 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@317a0e6b{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-06-07 00:33:19,392 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-06-07 00:33:30,245 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:service-registry:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\service-registry\pom.xml.
+2025-06-07 00:33:32,070 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:billing-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\billing-service\pom.xml.
+2025-06-07 00:33:33,057 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:guest-com.mandeep.guest_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\guest-service\pom.xml.
+2025-06-07 00:33:34,030 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:api-gateway:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\api-gateway\pom.xml.
+2025-06-07 00:33:34,560 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:reservation-com.mandeep.reservation_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\reservation-service\pom.xml.
+2025-06-07 00:33:35,166 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-07 15:53:11,583 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-07 15:53:21,078 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:service-registry:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\service-registry\pom.xml.
+2025-06-07 15:53:23,043 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:billing-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\billing-service\pom.xml.
+2025-06-07 15:53:23,980 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:guest-com.mandeep.guest_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\guest-service\pom.xml.
+2025-06-07 15:53:24,887 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:api-gateway:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\api-gateway\pom.xml.
+2025-06-07 15:53:25,358 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:reservation-com.mandeep.reservation_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\reservation-service\pom.xml.
+2025-06-07 15:53:25,944 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-07 15:56:58,224 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.15; built: 2024-11-05T19:44:57.623Z; git: 8281ae9740d4b4225e8166cc476bad237c70213a; jvm 21.0.1+12-LTS-29
+2025-06-07 15:56:58,327 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@4b516937{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@33dba575{STARTED}}
+2025-06-07 15:56:58,328 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-06-07 15:56:58,367 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@72537846{HTTP/1.1, (http/1.1)}{127.0.0.1:57061}
+2025-06-07 15:56:58,394 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@75e92ef3{STARTING}[12.0.15,sto=0] @249341ms
+2025-06-07 16:00:27,429 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-07 16:00:27,455 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-07 16:00:27,462 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-07 16:00:57,651 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-07 16:00:57,669 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-07 16:00:57,678 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-07 16:01:29,963 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-07 16:01:29,985 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-07 16:01:30,078 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-07 16:02:19,939 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-07 16:02:19,951 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-07 16:02:19,955 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-07 16:14:07,875 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-07 16:14:07,892 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-07 16:14:07,897 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-07 17:06:45,296 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-07 17:06:46,956 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-07 17:06:50,165 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /identity-service/src/main/java
+2025-06-07 17:06:50,169 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/main/resources
+2025-06-07 17:06:50,170 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/main/resources
+2025-06-07 17:06:50,173 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /identity-service/src/test/java
+2025-06-07 17:06:50,174 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/test/resources
+2025-06-07 17:06:51,661 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 4.00 sec, update config takes 1.00 sec 
+2025-06-07 17:06:52,545 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2025-06-07 17:06:52,597 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2025-06-07 17:06:52,605 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\src\test\resources
+2025-06-07 17:14:42,632 [Worker-41: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-07 17:14:45,510 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.pom
+2025-06-07 17:14:46,719 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.pom
+2025-06-07 17:14:46,814 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.pom
+2025-06-07 17:14:47,180 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates/org/hibernate/validator/hibernate-validator-parent/8.0.1.Final/hibernate-validator-parent-8.0.1.Final.pom
+2025-06-07 17:14:47,311 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/8.0.1.Final/hibernate-validator-parent-8.0.1.Final.pom
+2025-06-07 17:14:47,418 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/8.0.1.Final/hibernate-validator-parent-8.0.1.Final.pom
+2025-06-07 17:14:48,398 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar
+2025-06-07 17:14:48,446 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar
+2025-06-07 17:14:50,056 [Worker-41: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar
+2025-06-07 17:14:51,208 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2025-06-07 17:14:51,208 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2025-06-07 17:14:51,214 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\src\test\resources
+2025-06-07 17:14:52,468 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2025-06-07 17:14:52,494 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2025-06-07 17:14:52,501 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\src\test\resources
+2025-06-07 17:14:53,753 [Worker-54: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final-sources.jar
+2025-06-07 17:14:53,810 [Worker-54: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final-sources.jar
+2025-06-07 17:14:55,112 [Worker-54: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final-sources.jar
+2025-06-07 17:14:55,123 [Worker-54: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hibernate.validator:hibernate-validator:8.0.1.Final
+2025-06-07 17:14:55,394 [Worker-54: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final-javadoc.jar
+2025-06-07 17:14:55,657 [Worker-54: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final-javadoc.jar
+2025-06-07 17:14:55,664 [Worker-54: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for org.hibernate.validator:hibernate-validator:8.0.1.Final
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.hibernate.validator:hibernate-validator:jar:javadoc:8.0.1.Final
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-07 17:15:11,859 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-07 17:15:12,936 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-07 17:15:15,644 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /identity-service/src/main/java
+2025-06-07 17:15:15,645 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/main/resources
+2025-06-07 17:15:15,646 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/main/resources
+2025-06-07 17:15:15,647 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /identity-service/src/test/java
+2025-06-07 17:15:15,648 [Worker-41: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /identity-service/src/test/resources
+2025-06-07 17:15:16,939 [Worker-41: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 3.00 sec, update config takes 1.00 sec 
+2025-06-07 17:15:17,683 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2025-06-07 17:15:17,704 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2025-06-07 17:15:17,711 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\src\test\resources
+2025-06-08 01:19:53,449 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-08 01:19:53,485 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 01:19:53,494 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-08 01:38:37,998 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-08 01:38:38,064 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 01:38:38,074 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-08 01:39:48,755 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-08 01:39:48,773 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 01:39:48,778 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-08 01:40:14,939 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-08 01:40:14,957 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 01:40:15,069 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-08 03:35:33,413 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@75e92ef3{STOPPING}[12.0.15,sto=0]
+2025-06-08 03:35:33,428 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@72537846{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-06-08 22:47:51,184 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-06-08 22:48:01,473 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:service-registry:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\service-registry\pom.xml.
+2025-06-08 22:48:03,075 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:billing-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\billing-service\pom.xml.
+2025-06-08 22:48:03,902 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:guest-com.mandeep.guest_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\guest-service\pom.xml.
+2025-06-08 22:48:04,708 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:api-gateway:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\api-gateway\pom.xml.
+2025-06-08 22:48:05,134 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:reservation-com.mandeep.reservation_service.service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\HMS\reservation-service\pom.xml.
+2025-06-08 22:48:05,709 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mandeep:identity-service:0.0.1-SNAPSHOT @ C:\Users\LENOVO\Downloads\jwt-apigateway-security-main\jwt-apigateway-security-main\identity-service\pom.xml.
+2025-06-08 22:48:44,889 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-08 22:48:44,914 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 22:48:44,919 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\billing-service\src\test\resources
+2025-06-08 22:58:09,716 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.15; built: 2024-11-05T19:44:57.623Z; git: 8281ae9740d4b4225e8166cc476bad237c70213a; jvm 21.0.1+12-LTS-29
+2025-06-08 22:58:09,787 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@66c23b4a{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@14b2df03{STARTED}}
+2025-06-08 22:58:09,787 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-06-08 22:58:09,822 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@48658012{HTTP/1.1, (http/1.1)}{127.0.0.1:49815}
+2025-06-08 22:58:09,851 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@9d409e{STARTING}[12.0.15,sto=0] @634523ms
+2025-06-08 23:59:43,040 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-06-08 23:59:43,168 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-08 23:59:43,176 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\api-gateway\src\test\resources
+2025-06-09 00:02:04,681 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-09 00:02:04,703 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-09 00:02:04,712 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\LENOVO\HMS\reservation-service\src\test\resources
+2025-06-09 01:10:28,377 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@9d409e{STOPPING}[12.0.15,sto=0]
+2025-06-09 01:10:28,393 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@48658012{HTTP/1.1, (http/1.1)}{127.0.0.1:0}

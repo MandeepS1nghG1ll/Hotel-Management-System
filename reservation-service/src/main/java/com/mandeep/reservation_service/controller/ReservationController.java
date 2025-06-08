@@ -40,7 +40,7 @@ public class ReservationController {
     }
     
     
-    @PostMapping("/")
+    @PostMapping("/createReservation")
     public Reservation createReservation(@RequestBody Reservation reservation) { 
     	return service.createReservation(reservation); }
 	    

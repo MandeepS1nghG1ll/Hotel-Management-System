@@ -22,8 +22,8 @@ public class BillingController {
     }
 
     @GetMapping("/total/{reservationId}")
-    public ResponseEntity<Double> getTotalAmount(@PathVariable Long reservationId) {
-        Double totalAmount = billingService.getTotalAmount(reservationId);
+    public ResponseEntity<Billing> getTotalAmount(@PathVariable Long reservationId) {
+        Billing totalAmount = billingService.getTotalAmount(reservationId);
         return ResponseEntity.ok(totalAmount);
     }
 

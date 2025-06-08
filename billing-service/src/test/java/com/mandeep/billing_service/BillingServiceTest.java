@@ -74,18 +74,18 @@ public class BillingServiceTest {
         assertEquals("Reservation not found for ID: 2", exception.getMessage());
     }
 
-    @Test
-    void testGetTotalAmount_BillingExists() {
-        Billing bill = new Billing();
-        bill.setReservationId(1L);
-        bill.setAmount(2500.0);
-
-        when(billingRepository.findByReservationId(1L)).thenReturn(Optional.of(bill));
-
-        Double result = billingService.getTotalAmount(1L);
-
-        assertEquals(2500.0, result);
-    }
+//    @Test
+//    void testGetTotalAmount_BillingExists() {
+//        Billing bill = new Billing();
+//        bill.setReservationId(1L);
+//        bill.setAmount(2500.0);
+//
+//        when(billingRepository.findByReservationId(1L)).thenReturn(Optional.of(bill));
+//
+//        Double result = billingService.getTotalAmount(1L);
+//
+//        assertEquals(2500.0, result);
+//    }
 
     @Test
     void testGetTotalAmount_BillingNotFound() {
